@@ -2,7 +2,7 @@
 <div>
   <div class="title">热销推荐</div>
   <ul>
-    <li class="item" v-for="item in recommendList" :key="item.id">
+    <li class="item" v-for="item in list" :key="item.id">
       <img class="item-img" :src="item.imgUrl">
       <div class="item-info border-bottom">
         <p class="item-title">{{item.title}}</p>
@@ -18,30 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg',
-        title: '阿迪回哦啊',
-        desc: '阿迪后期而为i哦发热温暖'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg',
-        title: '阿迪回哦啊',
-        desc: '阿迪后期而为i哦发热温暖'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg',
-        title: '阿迪回哦啊',
-        desc: '阿迪后期而为i哦发热温暖'
-      }, {
-        id: '0004',
-        imgUrl: 'https://imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg',
-        title: '阿迪回哦啊',
-        desc: '阿迪后期而为i哦发热温暖'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
